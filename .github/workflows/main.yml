@@ -1,0 +1,21 @@
+on:
+  push:
+    branches: [ main ]
+name: Deploy Project (main)
+jobs:
+  web-deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v2
+    
+    - name: Sync files
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: anguish.org
+        port: ${{ secrets.port }}
+        username: ${{ secrets.main_username }}
+        password: ${{ secrets.main_password }}
+        server-dir: ${{ secrets.main_dir }}
+        state-name: .sync-state.json
