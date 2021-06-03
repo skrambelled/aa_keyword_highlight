@@ -1,3 +1,3 @@
-# aa_project
+# keyword_highlight
 
-This is a template repo for Ancient Anguish projects that may use the ftp workflow.
+This project aims to highlight keywords when spoken by monsters.
