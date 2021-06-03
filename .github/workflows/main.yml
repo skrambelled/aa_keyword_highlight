@@ -17,5 +17,5 @@ jobs:
         port: ${{ secrets.port }}
         username: ${{ secrets.main_username }}
         password: ${{ secrets.main_password }}
-        server-dir: ${{ secrets.main_dir }}
+        server-dir: mudlib/keyword_highlight/
         state-name: .sync-state.json
